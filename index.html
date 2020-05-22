@@ -6,7 +6,26 @@
 		<LINK REL="stylesheet" HREF="https://fonts.googleapis.com/css?family=Montserrat" TYPE="text/css" media="screen"> 
 		<LINK REL="stylesheet" HREF="https://fonts.googleapis.com/css?family=Montserrat" TYPE="text/css" media="print">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.3.1/cerulean/bootstrap.min.css">
-		<style type="text/css">
+		<script>
+			const anchors = document.querySelectorAll('a[href*="#"]')
+
+for (let anchor of anchors) {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault()
+    
+    const blockID = anchor.getAttribute('href').substr(1)
+    
+    document.getElementById(blockID).scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    })
+  })
+}
+			</script>
+			
+			
+			<style type="text/css">
+			
 		ul {
 		list-style: none;
 		}
